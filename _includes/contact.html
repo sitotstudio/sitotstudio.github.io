@@ -3,12 +3,12 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Send us an inquiry below, or email us at any time at info@sitot.ca</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="sentMessage" id="contactForm">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="control-group form-group">
@@ -37,6 +37,23 @@
                             </div>
                         </div>
                     </form>
+
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function(event) {
+                          event.preventDefault(); // Prevent the form from actually submitting
+                      
+                          const name = encodeURIComponent(document.getElementById('name').value.trim());
+                          const email = encodeURIComponent(document.getElementById('email').value.trim());
+                          const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+                          const message = encodeURIComponent(document.getElementById('message').value.trim());
+                      
+                          const subject = `Sitot booking inquiry from ${name}`;
+                          const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
+                      
+                          window.location.href = `mailto:info@sitot.ca?subject=${subject}&body=${body}`;
+                        });
+                      </script>
+
                 </div>
             </div>
         </div>
