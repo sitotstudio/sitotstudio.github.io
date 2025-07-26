@@ -1,17 +1,17 @@
-url: sitotstudio.github.io
+url: sitot.ca
 baseurl: ""
 
 # Site settings
-title: Sitot Studio
-email: sitotstudio@gmail.com
-description: "Using AI for art but keeping the craft, creativity, eye, labour, and love 100% human. The human way to use AI."
+title: Sitôt Studio
+email: info@sitot.ca
+description: "Who you are deserves to be seen."
 
 
 # Team names, titles and social links
 people:
-- name: In Construction
-  pic: 1
-  position: Artist
+- name: Publications
+  # pic: 1
+  position: Research Lab Collabs
   social:
     - title: twitter
       url: #
@@ -20,26 +20,26 @@ people:
     - title: stack-overflow
       url: #
 
-- name: TBD
-  pic: 2
-  position: Lead Marketer
+- name: Behind-the-scenes
+  # pic: 2
+  position: Short form videos
   social:
-    - title: twitter
+    - title: instagram
       url: #
-    - title: facebook
+    - title: tiktok
       url: #
     - title: linkedin
       url: #
 
-- name: TBD
-  pic: 3
-  position: Lead Developer
+- name: Completed Portraits
+  # pic: 3
+  position: View previous pieces
   social:
     - title: twitter
       url: #
     - title: facebook
       url: #
-    - title: google-plus
+    - title: instagram
       url: #
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
@@ -48,10 +48,10 @@ social:
   #  url: http://twitter.com/jekyllrb
   #- title: facebook
   #  url:
-  #- title: stack-overflow
-  #  url: http://stackoverflow.com/questions/tagged/jekyll
-  #- title: bitbucket 
-  #  url: http://bitbucket.org/jekyll
+  - title: linkedin
+    url: http://linkedin.com/company/sitotstudio
+  - title: instagram
+    url: http://instagram.com/sitotstudio
   - title: github
     url: http://github.com/sitotstudio
 
