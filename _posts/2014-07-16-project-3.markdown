@@ -3,7 +3,7 @@ title: Relationship Portraits
 subtitle: Group Package
 layout: default
 modal-id: 3
-date: 2025
+date: 2025-07-25
 img: golden.png
 thumbnail: golden-thumbnail.png
 alt: image-alt
