@@ -1,15 +1,13 @@
 ---
-title: Round Icons
-subtitle: Graphic Design
+title: Custom Snapshot Model
+subtitle: Artist Tooling
 layout: default
 modal-id: 6
-date: 2014-07-15
+date: 2025
 img: roundicons.png
 thumbnail: roundicons-thumbnail.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+price: Contact for quote
+description: Are you an artist looking to make personality art pieces of your own, in the artform of your choice? Whether your domain is  abstract sculptures, stained glass, woodwork, guo hua, or even unique painting style inclinations, this is a commission for our engineering team to create a new snapshot model with select visual descriptors that are most relevant to your art style. The mapping weights will also be calibrated to your specific artistic sensibilities and a full training session will be provided so you feel comfortable knowing the ins and outs of your own snapshot software! Note that our studio is open for collabs using our existing classic snapshot model as well, please contact us if that interests you!
 
 ---

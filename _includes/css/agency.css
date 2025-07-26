@@ -374,7 +374,7 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: rgba(254,209,54,.9); /* Fallback when no plugin support */
+    background: rgba(140, 201, 118, 0.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
@@ -657,7 +657,7 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
+    background-color: #182324;
     background-image: url('{{ site.baseurl }}/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -754,7 +754,7 @@ ul.social-buttons li a {
     line-height: 40px;
     outline: 0;
     color: #fff;
-    background-color: #222;
+    background-color: #ffbd59;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;

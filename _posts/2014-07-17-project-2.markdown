@@ -1,15 +1,15 @@
 ---
-title: Escape
-subtitle: Website Design
+title: Mini Portrait Series
+subtitle: Lowest price, impeccable quality
 layout: default
 modal-id: 2
-date: 2014-07-17
+date: 2025
 img: escape.png
 thumbnail: escape-thumbnail.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+numportraits: 1
+canvas: 10x10 inches
+price: 450.00 CAD
+description: Limited seats are available every month. The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. No matter your reasons, you deserve, quite literally, to be seen!
 
 ---

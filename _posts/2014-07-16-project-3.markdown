@@ -1,15 +1,15 @@
 ---
-title: Golden
-subtitle: Website Design
+title: Relationship Portraits
+subtitle: Group Package
 layout: default
 modal-id: 3
-date: 2014-07-16
+date: 2025
 img: golden.png
 thumbnail: golden-thumbnail.png
 alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
-category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
+numportraits: 2+
+canvas: 15x40 inches
+price: 4750.00 CAD/portrait
+description: Perfect for special events, QPRs, engagements, weddings, family milestones, business partners, or any group of people who have a form of relationship! Each person gets their own canvas based on their own custom visual profile, and at the same time, the group of portraits are designed to flow with one another when displayed together. This package is the best way to visualize a group's complimentary characteristics, as well as highlight (and sometimes reveal!) introspective similarities between individuals in the group. Friends and family consistently recognize which portrait belongs to who when multiple portraits are displayed together; a testament to the reliability of our personality snapshots and the amazing blend of skills and intuition of our artists.
 
 ---
