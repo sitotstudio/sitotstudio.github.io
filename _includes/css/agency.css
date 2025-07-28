@@ -176,7 +176,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "American Typewriter", serif, "Helvetica Neue",Helvetica,Arial,cursive;
+    font-weight: bold;
     color: #{{ site.data.template.color.primary }};
 }
 
@@ -374,7 +375,7 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: rgba(140, 201, 118, 0.9); /* Fallback when no plugin support */
+    background: rgba(15, 39, 7, 0.9); /* Fallback when no plugin support */
     background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
 }
 
@@ -753,8 +754,8 @@ ul.social-buttons li a {
     font-size: 20px;
     line-height: 40px;
     outline: 0;
-    color: #fff;
-    background-color: #ffbd59;
+    color: #9edb8d;
+    background-color: #23451a;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;

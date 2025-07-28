@@ -48,7 +48,9 @@
                           const message = encodeURIComponent(document.getElementById('message').value.trim());
                       
                           const subject = `Sitot booking inquiry from ${name}`;
-                          const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
+                          const body = encodeURIComponent(
+                            `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`
+                            );
                       
                           window.location.href = `mailto:info@sitot.ca?subject=${subject}&body=${body}`;
                         });
