@@ -7,7 +7,9 @@ date: 2025-07-25
 img: roundicons.png
 thumbnail: roundicons-thumbnail.png
 alt: image-alt
-price: Contact for quote
-description: Are you an artist looking to make personality art pieces of your own, in the artform of your choice? Whether your domain is  abstract sculptures, stained glass, woodwork, guo hua, or even unique painting style inclinations, this is a commission for our engineering team to create a new snapshot model with select visual descriptors that are most relevant to your art style. The mapping weights will also be calibrated to your specific artistic sensibilities and a full training session will be provided so you feel comfortable knowing the ins and outs of your own snapshot software! Note that our studio is open for collabs using our existing classic snapshot model as well, please contact us if that interests you!
+numportraits: unlimited copies of your model
+canvas: Not applicable, Software offering
+price: Custom
+description: Are you an artist looking to make personality art pieces of your own, in the artform of your choice? Whether your domain is  abstract sculptures, stained glass, woodwork, guo hua, or even unique painting style inclinations, this is a commission for our engineering team to create a new snapshot model with custom visual descriptors that are intentionally paired with your medium and art style. The mapping weights will also be calibrated to your specific artistic sensibilities/tastes and a full training session will be provided so you feel comfortable knowing the ins and outs of your own snapshot software! Note that our studio is open for collabs using our existing classic snapshot model as well, please contact us if that interests you!
 
 ---

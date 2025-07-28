@@ -4,7 +4,7 @@ baseurl: ""
 # Site settings
 title: Sitôt Studio
 email: info@sitot.ca
-description: "Who you are deserves to be seen."
+description: Who you are deserves to be seen.
 
 
 # Team names, titles and social links
@@ -15,9 +15,11 @@ people:
   social:
     - title: twitter
       url: #
-    - title: facebook
+    - title: medium
       url: #
-    - title: stack-overflow
+    - title: linkedin
+      url: #
+    - title: facebook
       url: #
 
 - name: Behind-the-scenes
@@ -26,34 +28,36 @@ people:
   social:
     - title: instagram
       url: #
-    - title: tiktok
+    - title: music
       url: #
-    - title: linkedin
+    - title: youtube
       url: #
 
 - name: Completed Portraits
   # pic: 3
   position: View previous pieces
   social:
-    - title: twitter
+    - title: pinterest
       url: #
     - title: facebook
       url: #
     - title: instagram
       url: #
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Page Bottom Socials (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  #- title: twitter
-  #  url: http://twitter.com/jekyllrb
-  #- title: facebook
-  #  url:
   - title: linkedin
     url: http://linkedin.com/company/sitotstudio
   - title: instagram
     url: http://instagram.com/sitotstudio
-  - title: github
-    url: http://github.com/sitotstudio
+  - title: youtube
+    url: https://youtube.com/@sitotstudio
+  - title: pinterest
+    url: https://ca.pinterest.com/sitotstudio/_created
+  - title: facebook
+    url: http://facebook.com/61558949217059
+  - title: music
+    url: http://tiktok.com/@sitotstudio
 
 # Postal address (add as many lines as necessary)
 #address:
