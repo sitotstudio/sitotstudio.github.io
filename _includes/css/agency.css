@@ -176,7 +176,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "American Typewriter", "Courier Prime", "Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "American Typewriter", "Typewriter", "Courier Prime", "Kaushan Script", "Helvetica Neue",Helvetica,Arial,cursive;
     font-weight: bold;
     color: #{{ site.data.template.color.primary }};
 }
