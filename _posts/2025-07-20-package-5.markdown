@@ -3,7 +3,7 @@ title: Commercial Package
 subtitle: For businesses
 layout: default
 modal-id: 5
-date: 2025-07-25
+date: 2025-07-20
 img: startup-framework.png
 thumbnail: startup-framework-thumbnail.png
 alt: image-alt

@@ -3,7 +3,7 @@ title: Custom Snapshot Software
 subtitle: Artist Tooling
 layout: default
 modal-id: 6
-date: 2025-07-25
+date: 2025-07-19
 img: roundicons.png
 thumbnail: roundicons-thumbnail.png
 alt: image-alt
