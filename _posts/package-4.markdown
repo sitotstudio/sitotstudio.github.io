@@ -2,7 +2,7 @@
 title: Mini Portrait Series
 subtitle: Lowest price, impeccable quality
 layout: default
-modal-id: 2
+modal-id: 4
 date: 2025-07-25
 img: escape.png
 thumbnail: escape-thumbnail.png

@@ -2,7 +2,7 @@
 title: Multiple Individual Portraits
 subtitle: Progression Package
 layout: default
-modal-id: 4
+modal-id: 2
 date: 2025-07-25
 img: treehouse.png
 thumbnail: treehouse-thumbnail.png
