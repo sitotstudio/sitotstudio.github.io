@@ -384,6 +384,7 @@ section h3.section-subheading {
 
   .service-subtitle {
     font-style: italic;
+    font-weight: normal;
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 15px;
