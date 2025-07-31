@@ -52,7 +52,6 @@ h3,
 h4,
 h5,
 h6 {
-    text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-weight: 700;
 }
@@ -385,6 +384,8 @@ section h3.section-subheading {
 
   .service-subtitle {
     font-style: italic;
+    text-transform: none;
+    font-family: {{ site.data.template.font.secondary }};
     font-size: 15px;
     color: #{{ site.data.template.color.muted }};
     margin-bottom: 10px;
