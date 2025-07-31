@@ -16,13 +16,17 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group form-group">
+                                    <input type="text" class="form-control" placeholder="Summarize your inquiry" id="topic">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <!-- div class="control-group form-group">
                                     <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
                                     <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group form-group">
+                                </div -->
+                                <!-- div class="control-group form-group">
                                     <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number.">
                                     <p class="help-block text-danger"></p>
-                                </div>
+                                </div -->
                             </div>
                             <div class="col-md-6">
                                 <div class="control-group form-group">
@@ -43,15 +47,14 @@
                           event.preventDefault(); // Prevent the form from actually submitting
                       
                           const name = encodeURIComponent(document.getElementById('name').value.trim());
-                          const email = encodeURIComponent(document.getElementById('email').value.trim());
-                          const phone = encodeURIComponent(document.getElementById('phone').value.trim());
+                          const topic = encodeURIComponent(document.getElementById('topic').value.trim());
+                          // const email = encodeURIComponent(document.getElementById('email').value.trim());
+                          // const phone = encodeURIComponent(document.getElementById('phone').value.trim());
                           const message = encodeURIComponent(document.getElementById('message').value.trim());
-                      
-                          const subject = `Sitot booking inquiry from ${name}`;
-                          const body = encodeURIComponent(
-                            `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0AMessage:%0D%0A${message}`
-                            );
-                      
+                          const subject = `Sitôt inquiry from ${name}: ${topic}`;
+                          const body = `${message}`;
+                        
+                          // TODO: fix encoding
                           window.location.href = `mailto:info@sitot.ca?subject=${subject}&body=${body}`;
                         });
                       </script>
