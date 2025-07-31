@@ -14,8 +14,9 @@
                         <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Fine Arts</h4>
-                    <p class="text-muted">Since we aim to create art about you, our artists are trained to expertly combine representational accuracy with each their unique tastes that brings your art piece to life. Research shows that contraints boost creativity and incidentally, by creating a list of verbal visual descriptors for each art piece (for example, 57.89% geometric, 32.61% saturated, etc.), we have seen our artists explore visual combinations that push the limits of their own imagination. The heart of our art team is therefore rooted in a deep respect for the craft and journey of creating, and in maximizing creativity by providing the conditions to energize and highlight our carefully selected artists' craft, skill, and eye in every piece.</p>
-                    <p class="text-muted"></p>
+                    <h5 class="service-subtitle text-muted">Exploring a new abstract genre.</h6>
+                    <p class="service-description text-muted">Since we aim to create art about you, our artists are trained to expertly combine representational accuracy with each their unique tastes that brings your art piece to life. Research shows that constraints boost creativity and incidentally, by creating a list of verbal visual descriptors for each art piece (for example, 57.89% geometric, 32.61% saturated, etc.), we have seen our artists explore visual combinations that push the limits of their own imagination. The heart of our art team is therefore rooted in a deep respect for the craft and journey of creating, and in maximizing creativity by providing the conditions to energize and highlight our carefully selected artists' craft, skill, and eye in every piece.</p>
+                    <a href="#" class="toggle-description">Say more</a>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -23,7 +24,9 @@
                         <i class="fa fa-flask fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Neuroscience & Psychology</h4>
-                    <p class="text-muted">How do existing limitations in personality tests inform and affect the way questionnaires are made? How do existing categorizations capture a full human person when we are ever-changing, and full of contradictions? Our work is rooted in academia, but fundamentally challenges the over-representation of colonial understanding of the human heart, affecting how we approach understanding personalities, and which commonly coined personality "traits" have been made to oppose another. Our approach to personality mapping is fun, scientifically rigorous, cross-cultural, iterative, and you may find that it captures sides of you that no other test has yet to capture.</p>
+                    <h5 class="service-subtitle text-muted">Academia, applied.</h6>
+                    <p class="service-description text-muted">How do existing limitations in personality tests inform and affect the way questionnaires are made? How do existing categorizations capture a full human person when we are ever-changing, and full of contradictions? Our work is rooted in academia, but fundamentally challenges the over-representation of colonial understanding of the human heart, affecting how we approach understanding personalities, and which commonly coined personality "traits" have been made to oppose another. Our approach to personality mapping is fun, scientifically rigorous, cross-cultural, iterative, and you may find that it captures sides of you that no other test has been able to capture.</p>
+                    <a href="#" class="toggle-description">Say more</a>
                 </div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
@@ -31,8 +34,22 @@
                         <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Software Engineering</h4>
-                    <p class="text-muted">Our team of software engineers are first and foremost creatives. We believe that software of scale does not find its best application in the realm of art. Our software is crafted in a way that is intertwined with the human touch, and extensive domain knowledge (in our case, the worlds of personality testing, visual metaphor theory, and cross-modal perception). Our software is like slow fashion; bespoke, timeless, and with care in every stitch.</p>
+                    <h5 class="service-subtitle text-muted">By artists, for artists.</h6>
+                    <p class="service-description text-muted">Our team of software engineers are first and foremost creatives. We believe that software of scale does not find its best application in the realm of art. Our software is crafted in a way that is intertwined with the human touch, and extensive domain knowledge (in our case, the worlds of personality testing, visual metaphor theory, and cross-modal perception). Our software is like slow fashion; bespoke, timeless, and with care in every stitch.</p>
+                    <a href="#" class="toggle-description">Say more</a>
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              document.querySelectorAll('.toggle-description').forEach(function (btn) {
+                btn.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  const serviceItem = btn.closest('.service-item');
+                  serviceItem.classList.toggle('expanded');
+                  btn.textContent = serviceItem.classList.contains('expanded') ? 'Say less' : 'Say more';
+                });
+              });
+            });
+          </script>
     </section>

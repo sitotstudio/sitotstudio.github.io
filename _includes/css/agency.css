@@ -355,6 +355,41 @@ section h3.section-subheading {
     text-transform: none;
 }
 
+.service-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-bottom: 0;
+  }
+
+  .service-item.expanded .service-description {
+    max-height: 500px; /* Adjust as needed */
+    margin-top: 15px;
+  }
+
+  .toggle-description {
+    display: inline-block;
+    margin-top: 10px;
+    color: #{{ site.data.template.color.primary }};
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+
+  .toggle-description:hover {
+    color: #{{ site.data.template.color.secondary }};
+    text-decoration: none;
+  }
+
+  .service-subtitle {
+    font-style: italic;
+    font-size: 15px;
+    color: #{{ site.data.template.color.muted }};
+    margin-bottom: 10px;
+  }
+
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
