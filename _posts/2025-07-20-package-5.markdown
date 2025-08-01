@@ -1,6 +1,6 @@
 ---
 title: Commercial Package
-subtitle: For businesses
+subtitle: Visualize your business
 layout: default
 modal-id: 5
 date: 2025-07-20
