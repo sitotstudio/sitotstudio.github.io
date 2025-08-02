@@ -9,40 +9,38 @@ description: Who you are deserves to be seen.
 
 # Team names, titles and social links
 people:
-- name: Publications
-  # pic: 1
-  position: Research Lab Collabs
-  social:
-    - title: twitter
-      url: #
-    - title: medium
-      url: #
-    - title: linkedin
-      url: #
-    - title: facebook
-      url: #
-
 - name: Behind-the-scenes
-  # pic: 2
+  # pic: 1
   position: Short form videos
   social:
     - title: instagram
-      url: #
+      url: http://instagram.com/sitotstudio
     - title: music
-      url: #
+      url: http://tiktok.com/@sitotstudio
     - title: youtube
-      url: #
+      url: https://youtube.com/@sitotstudio
 
 - name: Completed Portraits
-  # pic: 3
+  # pic: 2
   position: View previous pieces
   social:
-    - title: pinterest
-      url: #
-    - title: facebook
-      url: #
     - title: instagram
-      url: #
+      url: http://instagram.com/sitotstudio
+    - title: facebook
+      url: http://facebook.com/sitotstudio
+    - title: pinterest
+      url: https://ca.pinterest.com/sitotstudio/_created
+
+- name: Publications
+  # pic: 3
+  position: Research Lab Collabs
+  social:
+    - title: twitter
+      url: https://x.com/sitotstudio
+    - title: linkedin
+      url: http://linkedin.com/company/sitotstudio
+    - title: github
+      url: http://github.com/sitotstudio
 
 # Page Bottom Socials (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
@@ -55,7 +53,7 @@ social:
   - title: pinterest
     url: https://ca.pinterest.com/sitotstudio/_created
   - title: facebook
-    url: http://facebook.com/61558949217059
+    url: http://facebook.com/sitotstudio
   - title: music
     url: http://tiktok.com/@sitotstudio
 
