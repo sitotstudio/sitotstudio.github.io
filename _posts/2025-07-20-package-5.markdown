@@ -10,6 +10,6 @@ alt: image-alt
 numportraits: 1+
 canvas: Custom
 price: Custom
-description: For businesses looking for meaningful decoration. Instead of making a portrait for a human being, we create a visual descriptor profile based on your business vision, core values, team culture, etc. Due to the nature of this endeavour, we will be creating a custom model for mapping visual descriptors based on the nature of your business, and multiple discussions with founders or representatives instead of a snapshot session questionnaire. 
+description: For businesses looking for meaningful decoration. Instead of making a portrait for a human being, we create a visual descriptor profile based on your business vision, core values, team culture, etc. Due to the nature of this endeavour, we will be creating a custom software model for mapping visual descriptors based on the nature of your business. Furthermore, we will capture the facets of your business through multiple discussions with founders or representatives instead of our usual snapshot session questionnaire. 
 
 ---
