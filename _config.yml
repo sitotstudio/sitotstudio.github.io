@@ -65,3 +65,7 @@ social:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Sitemap
+plugins:
+  - jekyll-sitemap
