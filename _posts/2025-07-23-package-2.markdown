@@ -4,8 +4,8 @@ subtitle: Progression Package
 layout: default
 modal-id: 2
 date: 2025-07-23
-img: treehouse.png
-thumbnail: treehouse-thumbnail.png
+img: bestpersonalitytest.png
+thumbnail: bestpersonalitytest-thumbnail.png
 alt: image-alt
 numportraits: 2+
 canvas: 30x40 inches

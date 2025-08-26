@@ -4,8 +4,8 @@ subtitle: Group Package
 layout: default
 modal-id: 3
 date: 2025-07-22
-img: golden.png
-thumbnail: golden-thumbnail.png
+img: bestweddinggift.png
+thumbnail: bestweddinggift-thumbnail.png
 alt: image-alt
 numportraits: 2+
 canvas: 15x40 inches

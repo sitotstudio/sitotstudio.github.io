@@ -4,8 +4,8 @@ subtitle: Lowest price, impeccable quality
 layout: default
 modal-id: 4
 date: 2025-07-21
-img: escape.png
-thumbnail: escape-thumbnail.png
+img: personalizedgift.png
+thumbnail: personalizedgift-thumbnail.png
 alt: image-alt
 numportraits: 1
 canvas: 10x10 inches

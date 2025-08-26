@@ -4,8 +4,8 @@ subtitle: Visualize your business
 layout: default
 modal-id: 5
 date: 2025-07-20
-img: startup-framework.png
-thumbnail: startup-framework-thumbnail.png
+img: teambuilding.png
+thumbnail: teambuilding-thumbnail.png
 alt: image-alt
 numportraits: 1+
 canvas: Custom

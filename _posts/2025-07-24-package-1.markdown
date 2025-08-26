@@ -4,8 +4,8 @@ subtitle: Standard Package
 layout: default
 modal-id: 1
 date: 2025-07-24
-img: dreams.png
-thumbnail: dreams-thumbnail.png
+img: therapy.png
+thumbnail: therapy-thumbnail.png
 alt: image-alt
 numportraits: 1
 canvas: 30x40 inches

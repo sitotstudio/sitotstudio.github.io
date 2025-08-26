@@ -4,8 +4,8 @@ subtitle: Artist Tooling
 layout: default
 modal-id: 6
 date: 2025-07-19
-img: roundicons.png
-thumbnail: roundicons-thumbnail.png
+img: personalitytype.png
+thumbnail: personalitytype-thumbnail.png
 alt: image-alt
 numportraits: Not applicable
 canvas: Not applicable
