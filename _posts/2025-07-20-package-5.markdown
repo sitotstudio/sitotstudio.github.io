@@ -1,6 +1,6 @@
 ---
 title: Commercial Package
-subtitle: Visualize your business
+subtitle: Team culture visualized
 layout: default
 modal-id: 5
 date: 2025-07-20

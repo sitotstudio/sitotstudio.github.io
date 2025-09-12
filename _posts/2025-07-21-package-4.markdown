@@ -7,9 +7,9 @@ date: 2025-07-21
 img: personalizedgift.png
 thumbnail: personalizedgift-thumbnail.png
 alt: image-alt
-numportraits: 1
+numportraits: 1+
 canvas: 10x10 inches
 price: 450.00 CAD
-description: Limited seats are available every month. The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. No matter your reasons, you deserve, quite literally, to be seen!
+description: The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. Any offering can be made as a mini portrait, book yours today!
 
 ---

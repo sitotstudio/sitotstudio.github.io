@@ -1,6 +1,6 @@
 ---
-title: Relationship Portraits
-subtitle: Group Package
+title: Group Package
+subtitle: Relationships, families, friends
 layout: default
 modal-id: 3
 date: 2025-07-22

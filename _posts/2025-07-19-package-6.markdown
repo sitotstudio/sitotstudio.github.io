@@ -1,6 +1,6 @@
 ---
 title: Custom Snapshot Software
-subtitle: Artist Tooling
+subtitle: Adapted to your art
 layout: default
 modal-id: 6
 date: 2025-07-19
