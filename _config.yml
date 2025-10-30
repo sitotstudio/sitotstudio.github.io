@@ -10,7 +10,7 @@ description: Who you are deserves to be seen.
 # Team names, titles and social links
 people:
 - name: Behind-the-scenes
-  # pic: 1
+  pic: 1
   position: Short form videos
   social:
     - title: instagram
@@ -21,7 +21,7 @@ people:
       url: https://youtube.com/@sitotstudio
 
 - name: Completed Portraits
-  # pic: 2
+  pic: 2
   position: View previous pieces
   social:
     - title: instagram
@@ -32,8 +32,8 @@ people:
       url: https://ca.pinterest.com/sitotstudio/_created
 
 - name: Publications
-  # pic: 3
-  position: Research lab collabs
+  pic: 3
+  position: Science behind the art
   social:
     - title: twitter
       url: https://x.com/sitotstudio

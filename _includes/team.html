@@ -3,38 +3,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Studio Origins</h2>
-                    <h3 class="section-subheading text-muted">An intuition that wouldn't rest</h3>
+                    <h2 class="section-heading">Studio whims & whimsy</h2>
+                    <h3 class="section-subheading text-muted">Why are we doing this</h3>
                 </div>
-                <div class="team-member">
-                    <img src="img/team/founder-square.jpg" class="img-responsive img-circle" alt="">
-                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h4>A studio founder in their natural habitat</h4>
                     <p class="large text-muted">
-                        "Throughout my life, different people unrelated to one another told me I reminded them of the colour red.
-                        <br>As a kid, I would retort "but my favourite colour is green!" — but as I grew on the path of a scientist, I started asking myself, why did multiple people think about the colour red when interacting with me? What determining factors contributed to the feeling of redness? What other visual elements would people associate with me? How consistant would it be?
-                        <br>This led to a few initial anecdotal experiments; I had a colleague who felt very geometric to me. In the way he thought, planned his day, approached his work, I had an intuition he would definitely look geometric if I were to paint him. So I asked around: "would you associate Dimitri with geometric shapes, or swirly ones?" and to my surprise, people eagerly exclaimed: "oh he's definitely geometric!"
-                        <br>How come so many people could immediately identify this connection between visual characteristics and something as intangible as a person's vibes? And then came more questions; would Dimitri still feel geometric outside of work? Would he see himself as geometric? Would his mother feel he's more of a swirly person? Perhaps he's varying degrees of both.
-                        <br>Sitôt's personality portraits are my attempt at formalizing these sentiments. After months of testing, I built an initial version of the software that maps who a person is to 40 different visual characteristics (think saturation, linearity, noise, contrast, curviness, etc.) and lo and behold, I scored so high on hot colours, saturation, and brightness… turns out the software thinks I'm red too."
+                        From inheriting palm reading from family traditions to publishing machine learning research papers, and building an engineering career at big tech corporations, two worlds that aggressively rejected one another seemed to collide. However, nothing says that traditions and art are inherently unscientific, and nothing says we can't change the way we build software so that it can have the heart, creative process, and soul we understand and value in art.
                         <br>
-                        -- Ké, studio founder
+                        From social connection, to what makes art human, to the side of software engineering that is not influenced by profit; Sitôt is a space to explore this intersection.
                         <br><br>
-                        Ké is a software engineer turned full-time artist, with a tech background in machine learning, graphics, and computer vision that they have built a career with at companies like Autodesk and Microsoft. 
-                        On the arts side, Ké is a classical pianist under 15 years of tutelage from Moscow Tchaikovsky Conservatory alum E. Dyachkov, as well as a published researcher as part of the Distributed Digital Music Archives and Libraries' effort to digitalize a collection of medieval square-notation sheet music through machine-led optical music recognition. 
-                        However, Ké's heart has always been with visual arts, from ink on paper to paint on canvas, Ké intends on staying on the studio's artist roster even when the business paperwork starts piling up! 
+                        Here are some questions that motivate the studio's research: How much do we know about ourselves? What are our limitations in how we can convey who we are? In what ways do we form our understanding of ourselves based on others' perceptions? How does our language and its categorization of personality "traits" affect our view of others and ourselves? What are ways we can share defining parts of ourselves that go unspoken?
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h4><br><br>Coming Soon</h4>
-                    <h3 class="section-subheading text-muted">Areas of expansion on the roadmap</h3>
-                </div>
                 {% for member in site.people %}
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <!-- img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt=""-->
+                        <img src="img/team/{{ member.pic }}.jpg" class="img-responsive img-circle" alt="">
                         <h4>{{ member.name }}</h4>
                         <p class="text-muted">{{ member.position }}</p>
                         <ul class="list-inline social-buttons">
@@ -50,15 +38,6 @@
                     </div>
                 </div>
                 {% endfor %}
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">
-                        Want to help make things happen sooner?<br>From funding to artists and research collaborators, if the following questions interest you, let's chat!
-                        <br><br>
-                        How much do we know about ourselves? What are our limitations in how we can convey who we are? In what ways do we form our understanding of ourselves based on others' perceptions? How does our language and its categorization of personality "traits" affect our view of others and ourselves? What are ways we can share defining parts of ourselves that go unspoken?
-                    </p>
-                </div>
             </div>
         </div>
     </section>
