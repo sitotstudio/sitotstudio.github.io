@@ -58,9 +58,10 @@ social:
     url: http://tiktok.com/@sitotstudio
 
 # Postal address (add as many lines as necessary)
-#address:
-#  - line: 3481 Melrose Place
-#  - line: Beverly Hills, CA 90210
+address:
+  - line: PO Box 32571
+  - line: Richmond RPO Aberdeen Centre
+  - line: BC, Canada. V6X 3S1.
 
 # Build settings
 markdown: kramdown
