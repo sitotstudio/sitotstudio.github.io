@@ -903,3 +903,41 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
+/* Careers Section Styles */
+#careers .career-row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: table;
+    width: 100%;
+  }
+  
+  #careers .career-row > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  #careers .fa-stack {
+    font-size: 2.5em;
+  }
+  
+  #careers .career-text {
+    padding-left: 20px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 767px) {
+    #careers .career-row {
+      display: block;
+      text-align: center;
+    }
+    #careers .career-row > div {
+      display: block;
+      width: 100%;
+    }
+    #careers .career-text {
+      text-align: center;
+      padding-left: 0;
+      margin-top: 15px;
+    }
+  }
