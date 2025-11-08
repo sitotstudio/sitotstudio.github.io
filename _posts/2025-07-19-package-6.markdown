@@ -1,5 +1,5 @@
 ---
-title: Custom Personality Software
+title: Snapshot Software
 subtitle: Adapted to your art
 layout: default
 modal-id: 6
