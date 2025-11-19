@@ -73,151 +73,151 @@ permalink: /snapshot/
 </section>
 
 <script>
-const QUESTIONS_URL = "https://script.google.com/macros/s/AKfycbyx2o5ztlGMlOBwL4e6CxjNfg9EZbx7zTtdMg-9NHgy7gyKPCXD_-saIiDCOlSdOWuT/exec";
-const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbz4jq5c8uQC8d8gCx5d0yivhLdApcWiNTrjziFbDApmqNogLIbDZP8lmCxNsj6XwVZeCg/exec";
+    const QUESTIONS_URL = "https://script.google.com/macros/s/AKfycbyx2o5ztlGMlOBwL4e6CxjNfg9EZbx7zTtdMg-9NHgy7gyKPCXD_-saIiDCOlSdOWuT/exec";
+    const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbz4jq5c8uQC8d8gCx5d0yivhLdApcWiNTrjziFbDApmqNogLIbDZP8lmCxNsj6XwVZeCg/exec";
 
-let uid = "";
-let userEmail = "";
+    let uid = "";
+    let userEmail = "";
 
-function startSnapshot() {
-    const idInput = document.getElementById("userIdInput").value.trim();
-    const emailInput = document.getElementById("emailInput").value.trim();
+    function startSnapshot() {
+        const idInput = document.getElementById("userIdInput").value.trim();
+        const emailInput = document.getElementById("emailInput").value.trim();
 
-    if (!emailInput) {
-        alert("Please enter your email to give us a way to contact you for next steps!");
-        return;
+        if (!emailInput) {
+            alert("Please enter your email to give us a way to contact you for next steps!");
+            return;
+        }
+
+        uid = idInput;
+        userEmail = emailInput;
+
+        // Hide landing, show questionnaire
+        document.getElementById("landingPage").style.display = "none";
+        document.getElementById("questionnairePage").style.display = "block";
+
+        // Start the questions
+        loadQuestion();
     }
 
-    uid = idInput;
-    userEmail = emailInput;
+    let questions = [];
+    let index = 0;
+    let answers = {};
 
-    // Hide landing, show questionnaire
-    document.getElementById("landingPage").style.display = "none";
-    document.getElementById("questionnairePage").style.display = "block";
+    // LOAD QUESTIONS
+    async function loadQuestions() {
+    try {
+        const res = await fetch(QUESTIONS_URL);
+        const data = await res.json();
+        console.log("Fetched questions:", data);
+        
+        // Make sure your JSON has the right structure
+        questions = data.questions; 
+        showQuestion();
+    } catch (err) {
+        console.error("Error fetching questions:", err);
+        document.getElementById("question-text").innerText = "Failed to load questions.";
+    }
+    }
 
-    // Start the questions
-    loadQuestion();
-}
+    // SHOW CURRENT QUESTION
+    function showQuestion() {
+    const q = questions[index];
 
-let questions = [];
-let index = 0;
-let answers = {};
+    document.getElementById("question-text").textContent = q.text;
 
-// LOAD QUESTIONS
-async function loadQuestions() {
-  try {
-    const res = await fetch(QUESTIONS_URL);
-    const data = await res.json();
-    console.log("Fetched questions:", data);
-    
-    // Make sure your JSON has the right structure
-    questions = data.questions; 
+    // Restore previous answer or default
+    const slider = document.getElementById("slider");
+    const valueSpan = document.getElementById("slider-value");
+
+    if (answers[q.id] !== undefined) {
+        slider.value = answers[q.id];
+    } else {
+        slider.value = 0.50;
+    }
+    valueSpan.textContent = parseFloat(slider.value).toFixed(2);
+
+    // Back button only shows after the first question
+    document.getElementById("back-btn").style.display = index > 0 ? "inline-block" : "none";
+
+    // Show/hide Next vs Submit
+    if (index === questions.length - 1) {
+        document.getElementById("next-btn").style.display = "none";
+        document.getElementById("submit-btn").style.display = "inline-block";
+    } else {
+        document.getElementById("next-btn").style.display = "inline-block";
+        document.getElementById("submit-btn").style.display = "none";
+    }
+    }
+
+    // SLIDER VALUE DISPLAY
+    document.getElementById("slider").addEventListener("input", (e) => {
+    document.getElementById("slider-value").textContent = parseFloat(e.target.value).toFixed(2);
+    });
+
+    // NEXT BUTTON
+    document.getElementById("next-btn").addEventListener("click", () => {
+    saveCurrentAnswer();
+    index++;
     showQuestion();
-  } catch (err) {
-    console.error("Error fetching questions:", err);
-    document.getElementById("question-text").innerText = "Failed to load questions.";
-  }
-}
+    });
 
-// SHOW CURRENT QUESTION
-function showQuestion() {
-  const q = questions[index];
+    // BACK BUTTON
+    document.getElementById("back-btn").addEventListener("click", () => {
+    saveCurrentAnswer();
+    index--;
+    showQuestion();
+    });
 
-  document.getElementById("question-text").textContent = q.text;
+    // SAVE CURRENT ANSWER
+    function saveCurrentAnswer() {
+    const q = questions[index];
+    answers[q.id] = document.getElementById("slider").value;
+    }
 
-  // Restore previous answer or default
-  const slider = document.getElementById("slider");
-  const valueSpan = document.getElementById("slider-value");
+    // SUBMIT
+    document.getElementById("submit-btn").addEventListener("click", async () => {
+    saveCurrentAnswer(); // capture last question
 
-  if (answers[q.id] !== undefined) {
-    slider.value = answers[q.id];
-  } else {
-    slider.value = 0.50;
-  }
-  valueSpan.textContent = parseFloat(slider.value).toFixed(2);
+    await fetch(SUBMIT_URL, {
+        method: "POST",
+        body: JSON.stringify({ 
+            uid: uid, 
+            userEmail: userEmail, 
+            answers: answers }),
+    });
 
-  // Back button only shows after the first question
-  document.getElementById("back-btn").style.display = index > 0 ? "inline-block" : "none";
+    alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be ready with your order; please make sure your art piece order was completed successfully or contact info@sitot.ca in case of doubt. Work on canvases begin upon payment reception.");
+    window.location.href = "/";
+    });
 
-  // Show/hide Next vs Submit
-  if (index === questions.length - 1) {
-    document.getElementById("next-btn").style.display = "none";
-    document.getElementById("submit-btn").style.display = "inline-block";
-  } else {
-    document.getElementById("next-btn").style.display = "inline-block";
-    document.getElementById("submit-btn").style.display = "none";
-  }
-}
+    // INIT
+    // loadQuestions();
 
-// SLIDER VALUE DISPLAY
-document.getElementById("slider").addEventListener("input", (e) => {
-  document.getElementById("slider-value").textContent = parseFloat(e.target.value).toFixed(2);
-});
+    // Styling for the slider
+    /* REMOVE filled portion on WebKit browsers (Chrome, Safari, iOS) */
+    input[type="range"]::-webkit-slider-runnable-track {
+        background: #ddd !important;   /* neutral track */
+    }
 
-// NEXT BUTTON
-document.getElementById("next-btn").addEventListener("click", () => {
-  saveCurrentAnswer();
-  index++;
-  showQuestion();
-});
+    /* Remove the green fill before the thumb */
+    input[type="range"]::-webkit-slider-thumb:active,
+    input[type="range"]::-webkit-slider-thumb:focus,
+    input[type="range"]::-webkit-slider-thumb {
+        box-shadow: none !important;
+    }
 
-// BACK BUTTON
-document.getElementById("back-btn").addEventListener("click", () => {
-  saveCurrentAnswer();
-  index--;
-  showQuestion();
-});
+    /* Remove filled track on Firefox */
+    input[type="range"]::-moz-range-progress {
+        background: transparent !important;
+    }
 
-// SAVE CURRENT ANSWER
-function saveCurrentAnswer() {
-  const q = questions[index];
-  answers[q.id] = document.getElementById("slider").value;
-}
+    /* Full track for Firefox */
+    input[type="range"]::-moz-range-track {
+        background: #ddd !important;
+    }
 
-// SUBMIT
-document.getElementById("submit-btn").addEventListener("click", async () => {
-  saveCurrentAnswer(); // capture last question
-
-  await fetch(SUBMIT_URL, {
-    method: "POST",
-    body: JSON.stringify({ 
-        uid: uid, 
-        userEmail: userEmail, 
-        answers: answers }),
-  });
-
-  alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be ready with your order; please make sure your art piece order was completed successfully or contact info@sitot.ca in case of doubt. Work on canvases begin upon payment reception.");
-  window.location.href = "/";
-});
-
-// INIT
-// loadQuestions();
-
-// Styling for the slider
-/* REMOVE filled portion on WebKit browsers (Chrome, Safari, iOS) */
-input[type="range"]::-webkit-slider-runnable-track {
-    background: #ddd !important;   /* neutral track */
-}
-
-/* Remove the green fill before the thumb */
-input[type="range"]::-webkit-slider-thumb:active,
-input[type="range"]::-webkit-slider-thumb:focus,
-input[type="range"]::-webkit-slider-thumb {
-    box-shadow: none !important;
-}
-
-/* Remove filled track on Firefox */
-input[type="range"]::-moz-range-progress {
-    background: transparent !important;
-}
-
-/* Full track for Firefox */
-input[type="range"]::-moz-range-track {
-    background: #ddd !important;
-}
-
-/* Remove outline on focus */
-input[type="range"]:focus {
-    outline: none;
-}
+    /* Remove outline on focus */
+    input[type="range"]:focus {
+        outline: none;
+    }
 </script>
