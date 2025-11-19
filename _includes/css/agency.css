@@ -988,6 +988,8 @@ body {
     cursor: pointer;
     border: 3px solid white;
     box-shadow: 0 0 4px rgba(0,0,0,0.25);
+    /* Center vertically on the track */
+    margin-top: -8px; /* (thumb_height - track_height) / 2 = (22 - 6)/2 */
   }
   
   /* Track fill on WebKit (for the filled portion) */
@@ -1015,4 +1017,6 @@ body {
     border-radius: 50%;
     border: 3px solid white;
     cursor: pointer;
+    /* Center vertically on the track */
+    margin-top: -8px;
   }
