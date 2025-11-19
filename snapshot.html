@@ -79,7 +79,7 @@ permalink: /snapshot/
     let uid = "";
     let userEmail = "";
 
-    function startSnapshot() {
+    window.startSnapshot = function() {
         const idInput = document.getElementById("userIdInput").value.trim();
         const emailInput = document.getElementById("emailInput").value.trim();
 
@@ -104,90 +104,90 @@ permalink: /snapshot/
     let answers = {};
 
     // LOAD QUESTIONS
-    async function loadQuestions() {
-    try {
-        const res = await fetch(QUESTIONS_URL);
-        const data = await res.json();
-        console.log("Fetched questions:", data);
-        
-        // Make sure your JSON has the right structure
-        questions = data.questions; 
-        showQuestion();
-    } catch (err) {
-        console.error("Error fetching questions:", err);
-        document.getElementById("question-text").innerText = "Failed to load questions.";
-    }
+    window.loadQuestions = async function() {
+        try {
+            const res = await fetch(QUESTIONS_URL);
+            const data = await res.json();
+            console.log("Fetched questions:", data);
+            
+            // Make sure your JSON has the right structure
+            questions = data.questions; 
+            showQuestion();
+        } catch (err) {
+            console.error("Error fetching questions:", err);
+            document.getElementById("question-text").innerText = "Failed to load questions.";
+        }
     }
 
     // SHOW CURRENT QUESTION
-    function showQuestion() {
-    const q = questions[index];
+    window.showQuestion = function() {
+        const q = questions[index];
 
-    document.getElementById("question-text").textContent = q.text;
+        document.getElementById("question-text").textContent = q.text;
 
-    // Restore previous answer or default
-    const slider = document.getElementById("slider");
-    const valueSpan = document.getElementById("slider-value");
+        // Restore previous answer or default
+        const slider = document.getElementById("slider");
+        const valueSpan = document.getElementById("slider-value");
 
-    if (answers[q.id] !== undefined) {
-        slider.value = answers[q.id];
-    } else {
-        slider.value = 0.50;
-    }
-    valueSpan.textContent = parseFloat(slider.value).toFixed(2);
+        if (answers[q.id] !== undefined) {
+            slider.value = answers[q.id];
+        } else {
+            slider.value = 0.50;
+        }
+        valueSpan.textContent = parseFloat(slider.value).toFixed(2);
 
-    // Back button only shows after the first question
-    document.getElementById("back-btn").style.display = index > 0 ? "inline-block" : "none";
+        // Back button only shows after the first question
+        document.getElementById("back-btn").style.display = index > 0 ? "inline-block" : "none";
 
-    // Show/hide Next vs Submit
-    if (index === questions.length - 1) {
-        document.getElementById("next-btn").style.display = "none";
-        document.getElementById("submit-btn").style.display = "inline-block";
-    } else {
-        document.getElementById("next-btn").style.display = "inline-block";
-        document.getElementById("submit-btn").style.display = "none";
-    }
+        // Show/hide Next vs Submit
+        if (index === questions.length - 1) {
+            document.getElementById("next-btn").style.display = "none";
+            document.getElementById("submit-btn").style.display = "inline-block";
+        } else {
+            document.getElementById("next-btn").style.display = "inline-block";
+            document.getElementById("submit-btn").style.display = "none";
+        }
     }
 
     // SLIDER VALUE DISPLAY
     document.getElementById("slider").addEventListener("input", (e) => {
-    document.getElementById("slider-value").textContent = parseFloat(e.target.value).toFixed(2);
+        document.getElementById("slider-value").textContent = parseFloat(e.target.value).toFixed(2);
     });
 
     // NEXT BUTTON
     document.getElementById("next-btn").addEventListener("click", () => {
-    saveCurrentAnswer();
-    index++;
-    showQuestion();
+        saveCurrentAnswer();
+        index++;
+        showQuestion();
     });
 
     // BACK BUTTON
     document.getElementById("back-btn").addEventListener("click", () => {
-    saveCurrentAnswer();
-    index--;
-    showQuestion();
+        saveCurrentAnswer();
+        index--;
+        showQuestion();
     });
 
     // SAVE CURRENT ANSWER
-    function saveCurrentAnswer() {
-    const q = questions[index];
-    answers[q.id] = document.getElementById("slider").value;
+    window.saveCurrentAnswer = function() {
+        const q = questions[index];
+        answers[q.id] = document.getElementById("slider").value;
     }
 
     // SUBMIT
     document.getElementById("submit-btn").addEventListener("click", async () => {
-    saveCurrentAnswer(); // capture last question
+        saveCurrentAnswer(); // capture last question
 
-    await fetch(SUBMIT_URL, {
-        method: "POST",
-        body: JSON.stringify({ 
-            uid: uid, 
-            userEmail: userEmail, 
-            answers: answers }),
+        await fetch(SUBMIT_URL, {
+            method: "POST",
+            body: JSON.stringify({ 
+                uid: uid, 
+                userEmail: userEmail, 
+                answers: answers }),
     });
 
     alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be ready with your order; please make sure your art piece order was completed successfully or contact info@sitot.ca in case of doubt. Work on canvases begin upon payment reception.");
-    window.location.href = "/";
+        window.location.href = "/";
     });
 
     // INIT
