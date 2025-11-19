@@ -1,0 +1,189 @@
+---
+layout: page
+title: Snapshot
+permalink: /snapshot/
+---
+
+<section id="snapshot">
+    <div id="landingPage">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+
+                <h2 class="section-heading">Snapshot Questionnaire</h2>
+                <h3 class="section-subheading text-muted">
+                    Before we begin, please enter your unique ID (uid) if you were provided one, this allows us to link your responses to your order.
+                </h3>
+                <h3 class="section-subheading text-muted">
+                    During the questionnaire, be as specific as you'd like. Answers range from <strong>0%</strong> (not relatable at all) 
+                    to <strong>100%</strong> (fully relatable), adjustable in increments of <strong>0.01</strong>.<br>
+                    If you're unsure or feel something doesn't apply, choose <strong>0.5 (50%)</strong>.
+                    Keep in mind there are no wrong answers!
+                </h3>
+
+                <div style="max-width: 400px; margin: 0 auto; text-align: left;">
+
+                    <div class="form-group">
+                        <label>Your unique ID</label>
+                        <input type="text" id="userIdInput" class="form-control" placeholder="uid-XXX">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label>Email</label>
+                        <input type="email" id="emailInput" class="form-control" placeholder="you@example.com">
+                    </div>
+
+                    <button class="btn btn-primary btn-xl" style="margin-top: 25px;" onclick="startSnapshot()">
+                        Begin
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="questionnairePage" style="display: none;">
+        <div class="container text-center" style="padding-top: 40px;">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 id="question-text">Loading…</h3>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px;">
+                <input id="slider" type="range" min="0.0" max="1.0" step="0.01" value="0.5"
+                    class="form-range" style="width: 80%;">
+                <p>Value: <span id="slider-value">0.50</span></p>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <button id="back-btn" class="btn btn-secondary btn-xl" style="display:none; margin-right: 10px;">
+                Back
+                </button>
+
+                <button id="next-btn" class="btn btn-primary btn-xl">
+                Next
+                </button>
+
+                <button id="submit-btn" class="btn btn-success btn-xl" style="display:none;">
+                Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+const QUESTIONS_URL = "https://script.google.com/macros/s/AKfycbyx2o5ztlGMlOBwL4e6CxjNfg9EZbx7zTtdMg-9NHgy7gyKPCXD_-saIiDCOlSdOWuT/exec";
+const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbz4jq5c8uQC8d8gCx5d0yivhLdApcWiNTrjziFbDApmqNogLIbDZP8lmCxNsj6XwVZeCg/exec";
+
+let uid = "";
+let userEmail = "";
+
+function startSnapshot() {
+    const idInput = document.getElementById("userIdInput").value.trim();
+    const emailInput = document.getElementById("emailInput").value.trim();
+
+    if (!emailInput) {
+        alert("Please enter your email to give us a way to contact you for next steps!");
+        return;
+    }
+
+    uid = idInput;
+    userEmail = emailInput;
+
+    // Hide landing, show questionnaire
+    document.getElementById("landingPage").style.display = "none";
+    document.getElementById("questionnairePage").style.display = "block";
+
+    // Start the questions
+    loadQuestion();
+}
+
+let questions = [];
+let index = 0;
+let answers = {};
+
+// LOAD QUESTIONS
+async function loadQuestions() {
+  const res = await fetch(QUESTIONS_URL);
+  const data = await res.json();
+  questions = data.questions;
+  showQuestion();
+}
+
+// SHOW CURRENT QUESTION
+function showQuestion() {
+  const q = questions[index];
+
+  document.getElementById("question-text").textContent = q.text;
+
+  // Restore previous answer or default
+  const slider = document.getElementById("slider");
+  const valueSpan = document.getElementById("slider-value");
+
+  if (answers[q.id] !== undefined) {
+    slider.value = answers[q.id];
+  } else {
+    slider.value = 0.50;
+  }
+  valueSpan.textContent = parseFloat(slider.value).toFixed(2);
+
+  // Back button only shows after the first question
+  document.getElementById("back-btn").style.display = index > 0 ? "inline-block" : "none";
+
+  // Show/hide Next vs Submit
+  if (index === questions.length - 1) {
+    document.getElementById("next-btn").style.display = "none";
+    document.getElementById("submit-btn").style.display = "inline-block";
+  } else {
+    document.getElementById("next-btn").style.display = "inline-block";
+    document.getElementById("submit-btn").style.display = "none";
+  }
+}
+
+// SLIDER VALUE DISPLAY
+document.getElementById("slider").addEventListener("input", (e) => {
+  document.getElementById("slider-value").textContent = parseFloat(e.target.value).toFixed(2);
+});
+
+// NEXT BUTTON
+document.getElementById("next-btn").addEventListener("click", () => {
+  saveCurrentAnswer();
+  index++;
+  showQuestion();
+});
+
+// BACK BUTTON
+document.getElementById("back-btn").addEventListener("click", () => {
+  saveCurrentAnswer();
+  index--;
+  showQuestion();
+});
+
+// SAVE CURRENT ANSWER
+function saveCurrentAnswer() {
+  const q = questions[index];
+  answers[q.id] = document.getElementById("slider").value;
+}
+
+// SUBMIT
+document.getElementById("submit-btn").addEventListener("click", async () => {
+  saveCurrentAnswer(); // capture last question
+
+  await fetch(SUBMIT_URL, {
+    method: "POST",
+    body: JSON.stringify({ 
+        uid: uid, 
+        userEmail: userEmail, 
+        answers: answers }),
+  });
+
+  alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be ready with your order; please make sure your booking");
+  window.location.href = "/";
+});
+
+// INIT
+loadQuestions();
+</script>
