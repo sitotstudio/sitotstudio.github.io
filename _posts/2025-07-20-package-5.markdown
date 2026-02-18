@@ -10,6 +10,6 @@ alt: image-alt
 numportraits: 1+
 canvas: Custom
 price: Custom
-description: For businesses looking for meaningful office decor, or member keepsakes. While many teams choose to have standard portraits made of their founders, or as anniversary gifts for employees, this offering focuses on the your business itself. Instead of making a portrait for a human being, we create a visual descriptor profile based on your business vision, core values, team culture, etc. Due to the nature of this endeavour, we will be creating a custom software model for mapping visual descriptors based on the nature of your business. Furthermore, we will capture the facets of your business through multiple discussions with founders or representatives instead of our usual snapshot session questionnaire, for a fully bespoke, accurate, and timeless representation of what you're bringing to the world.
+description: For businesses looking for meaningful office decor, or member keepsakes. Whether you're looking for a mosaic of mini-portraits that showcase all the diverse personalities in your office, a large piece of your core team's personalities working together, or a visual representation of your business' core values, we'll create the perfect custom decoration adapted to your workspace. Book a consultation and let's add personality to your walls today! 
 
 ---

@@ -1,6 +1,6 @@
 ---
-title: Group Package
-subtitle: Relationships, families, friends
+title: Family Package
+subtitle: Compare yourselves
 layout: default
 modal-id: 3
 date: 2025-07-22

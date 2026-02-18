@@ -1,6 +1,6 @@
 ---
-title: Mini Portrait Series
-subtitle: Lowest price, impeccable quality
+title: Mini Portrait
+subtitle: Accessible price point
 layout: default
 modal-id: 4
 date: 2025-07-21
@@ -10,6 +10,6 @@ alt: image-alt
 numportraits: 1+
 canvas: 10x10 inches
 price: 450.00 CAD (+200 for full profile upgrade)
-description: The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. Any offering can be made as a mini portrait. A popular customization is to have a mini portrait made with the full questionnaire, and full list of visual descriptors.
+description: The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. Any package can be made as a mini portrait. A popular customization is to have a mini portrait made with the full questionnaire, and full list of visual descriptors.
 
 ---
