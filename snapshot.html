@@ -11,7 +11,9 @@ permalink: /snapshot/
 
                 <h2 class="section-heading">Snapshot Questionnaire</h2>
                 <h3 class="section-subheading text-muted">
-                    Before we begin, please enter your unique ID (uid) if you were provided one, this allows us to link your responses to your order.
+                    Before we begin, please enter your unique ID (uid) if you were provided one, this allows us to link your responses to your order. A new UID will be assigned to you otherwise.
+                    <br>
+                    We will send your results in bar chart form to your email once we run your responses through our system!
                 </h3>
                 <h3 class="section-subheading text-muted">
                     During the questionnaire, be as specific as you'd like. Answers range from <strong>0.0 (0%)</strong> (hard disagree) 
@@ -23,7 +25,7 @@ permalink: /snapshot/
                 <div style="max-width: 400px; margin: 0 auto; text-align: left;">
 
                     <div class="form-group">
-                        <label>Your unique ID</label>
+                        <label>Name or UID</label>
                         <input type="text" id="userIdInput" class="form-control" placeholder="uid-XXX">
                     </div>
 
@@ -46,7 +48,7 @@ permalink: /snapshot/
         <div class="quiz-container text-center" style="padding-top: 40px;">
 
 
-            <h3 id="question-text">Loading…</h3>
+            <h3 id="question-text">Fetching Questions…</h3>
 
 
             <div class="slider-wrapper" style="margin-top: 50px;">
@@ -186,7 +188,7 @@ permalink: /snapshot/
                 answers: answers }),
     });
 
-    alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be ready with your order; please make sure your art piece order was completed successfully or contact info@sitot.ca in case of doubt. Work on canvases begin upon payment reception.");
+    alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be sent to your provided email by end of day. Please contact info@sitot.ca with any inquiries!");
         window.location.href = "/";
     });
 
