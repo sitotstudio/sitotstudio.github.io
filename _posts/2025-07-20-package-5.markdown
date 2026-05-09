@@ -7,9 +7,9 @@ date: 2025-07-20
 img: teambuilding.png
 thumbnail: teambuilding-thumbnail.png
 alt: image-alt
-numportraits: 1+
-canvas: Custom
-price: Custom
-description: For businesses looking for meaningful office decor, or member keepsakes. Whether you're looking for a mosaic of mini-portraits that showcase all the diverse personalities in your office, a large piece of your core team's personalities working together, or a visual representation of your business' core values, we'll create the perfect custom decoration adapted to your workspace. Book a consultation and let's add personality to your walls today! 
+deal: Custom quote
+prices: Custom specifications
+browse: N/A
+description: For businesses looking for meaningful office decor, or member keepsakes. Whether you're looking for a mosaic of mini-portraits that showcase all the diverse personalities in your office, a large piece of your core team's personalities working together, or a visual representation of your business' core values, we'll create the perfect custom decoration adapted to your workspace. Send us an email with your specifications at info@sitot.ca for a quote, and let's add personality to your walls today! 
 
 ---

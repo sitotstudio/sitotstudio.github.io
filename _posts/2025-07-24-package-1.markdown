@@ -1,5 +1,5 @@
 ---
-title: Standard Package
+title: Personality Portrait
 subtitle: Your personality on canvas
 layout: default
 modal-id: 1
@@ -7,9 +7,9 @@ date: 2025-07-24
 img: therapy.png
 thumbnail: therapy-thumbnail.png
 alt: image-alt
-numportraits: 1
-canvas: 30x40 inches
-price: 6200.00 CAD
-description: Our signature offering. Our most complete snapshot questionnaire captures every facet of your personality, from your quirks and what makes you shine, to all your contradictions that make you who you are. A full abstract art piece known as your personality portrait is created based on your visual descriptor profile (the results of your snapshot session), composed of over 40 visual descriptors (saturation, balance, linearity, etc.), each of them on a scale tailored to you, that combine to capture your personality in visual language. The final art piece is 100% hand-crafted, 100% human-designed, and 100% unique to you; visualizing who you are inside in ways no one has seen before.
+deal: -
+prices: 10"x10" 450CAD | 15"x40" 4750CAD | 30"x40" 6200CAD | Custom sizes available starting at 500CAD
+browse: Cara portfolio
+description: Our signature offering. Our snapshot questionnaire captures every facet of your personality, from your quirks and what makes you shine, to all your contradictions that make you who you are. A full abstract art piece known as your personality portrait is created based on your visual descriptor profile (the results of your snapshot session), composed of over 40 visual descriptors (saturation, balance, linearity, etc.), each of them on a scale tailored to you, that combine to capture your personality in visual language. The final art piece is 100% hand-crafted, 100% human-designed, and 100% unique to you; visualizing who you, or loved ones, are inside.
 
 ---

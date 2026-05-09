@@ -1,15 +1,15 @@
 ---
-title: Mini Portrait
-subtitle: Accessible price point
+title: Pay It Forward Program
+subtitle: Bring back bartering
 layout: default
 modal-id: 4
 date: 2025-07-21
 img: personalizedgift.png
 thumbnail: personalizedgift-thumbnail.png
 alt: image-alt
-numportraits: 1+
-canvas: 10x10 inches
-price: 450.00 CAD (+200 for full profile upgrade)
-description: The mini portrait series is like an amuse-bouche of our very best; a select list of our most impactful visual descriptors, a shorter curated questionnaire, and a smaller canvas for a concentrated straight-forward personality capture. For those who want the fastest turn-around, a truly unique gift that doubles as a special experience, or a great way to have a taste of personality portraits before committing to a full piece. Any package can be made as a mini portrait. A popular customization is to have a mini portrait made with the full questionnaire, and full list of visual descriptors.
+deal: Barter system
+prices: 10"x10" for your services
+browse: Cara portfolio
+description: To make personality portraits more accessible, we accept art swaps or other services. There are limited seats a year for this, and orders outside the pay it forward program take priority, so delivery time will be slow (though we will ensure we agree on timelines for the swap so we're on the same page regarding timing). Local pick-up only, currently this program is only available in BC and QC, Canada.
 
 ---

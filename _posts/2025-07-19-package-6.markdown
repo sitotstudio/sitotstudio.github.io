@@ -1,15 +1,15 @@
 ---
 title: Snapshot Software
-subtitle: For artists
+subtitle: Tailored to your art
 layout: default
 modal-id: 6
 date: 2025-07-19
 img: personalitytype.png
 thumbnail: personalitytype-thumbnail.png
 alt: image-alt
-numportraits: Not applicable
-canvas: Not applicable
-price: Custom
+deal: Custom quote
+prices: Longterm project
+browse: N/A
 description: A software model built for you, with mapping logic and output visual descriptors that match your tastes, your art form, and your style. Are you an artist looking to make personality art pieces of your own, in the artform of your choice? Whether your domain is abstract sculptures, stained glass, woodwork, guo hua, or even unique painting style inclinations, this is a commission for our engineering team to create a new snapshot model with custom visual descriptors that are intentionally paired with your medium and art style. The mapping weights will also be calibrated to your specific artistic sensibilities/tastes and a full training session will be provided so you feel comfortable knowing the ins and outs of your own snapshot software! Note that if you are looking to use our existing software, you can simply apply to join the studio as a guest artist, this offering is for a custom software mapping model catered to your practice.
 
 ---
