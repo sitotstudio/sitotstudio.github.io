@@ -8,7 +8,7 @@ img: bestweddinggift.png
 thumbnail: bestweddinggift-thumbnail.png
 alt: image-alt
 deal: 25% off total
-prices: 10"x10" 450CAD | 15"x40" 4750CAD | 30"x40" 6200CAD | Custom sizes available starting at 500CAD
+prices: 10"x10" 450CAD | 15"x40" 4750CAD | 30"x40" 6200CAD
 browse: Cara portfolio
 description: Order multiple portraits at once, for a group of people up to 6. Perfect for couples, family portraits, special events, QPRs, engagements, weddings, family milestones, business partners, or any group of people who have a form of relationship! Each person gets their own canvas based on their own custom visual profile. This package is the best way to visualize a group's complimentary characteristics, as well as highlight (and sometimes reveal!) introspective similarities between individuals in the group. Friends and family consistently recognize which portrait belongs to who when multiple portraits are displayed together; a testament to the reliability of our personality snapshot and artist intuition.
 

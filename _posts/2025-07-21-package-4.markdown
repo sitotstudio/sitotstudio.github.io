@@ -10,6 +10,6 @@ alt: image-alt
 deal: Barter system
 prices: 10"x10" for your services
 browse: Cara portfolio
-description: To make personality portraits more accessible, we accept art swaps or other services. There are limited seats a year for this, and orders outside the pay it forward program take priority, so delivery time will be slow (though we will ensure we agree on timelines for the swap so we're on the same page regarding timing). Local pick-up only, currently this program is only available in BC and QC, Canada.
+description: To make personality portraits more accessible, we accept art swaps or other services. There are limited seats a year for this, and orders outside the pay it forward program take priority, so delivery time will be slow (though we will ensure we agree on timelines for the swap so we're on the same page regarding timing). Email info@sitot.ca with your offer! Local pick-up only, currently this program is only available in BC and QC, Canada.
 
 ---
