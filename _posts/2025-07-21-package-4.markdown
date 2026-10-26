@@ -1,6 +1,6 @@
 ---
-title: Pay It Forward Program
-subtitle: Bring back bartering
+title: Pet Portraits
+subtitle: Answer for them
 layout: default
 modal-id: 4
 date: 2025-07-21
@@ -8,8 +8,8 @@ img: personalizedgift.png
 thumbnail: personalizedgift-thumbnail.png
 alt: image-alt
 deal: Barter system
-prices: 10"x10" for your services
-browse: Cara portfolio
-description: To make personality portraits more accessible, we accept art swaps or other services. There are limited seats a year for this, and orders outside the pay it forward program take priority, so delivery time will be slow (though we will ensure we agree on timelines for the swap so we're on the same page regarding timing). Email info@sitot.ca with your offer! Local pick-up only, currently this program is only available in BC and QC, Canada.
+prices: 10"x10" 250CAD
+browse: Coming Soon
+description: We weren't sure this could work, but initial tests seem to indicate that by skipping the questions that don't apply, you can take the snapshot questionnaire and answer on behalf of your pet(s), and the results do manage to reflect their unique personality! We are in the process of painting our first two pet portraits, and it has been a very exciting way to see how their personalities are so unique, different, and immediately recognizable. Given that these portraits are acknowledged to be pets, the design process will not be as comprehensive as snapshots taken by human beings, so we have reflected this in the price. Use code PET250 in your snapshot checkout link to unlock the pet portrait pricing.
 
 ---
