@@ -1,6 +1,6 @@
 ---
 title: Pet Portraits
-subtitle: Answer for them
+subtitle: As unique as people
 layout: default
 modal-id: 4
 date: 2025-07-21
