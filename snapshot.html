@@ -10,17 +10,23 @@ permalink: /snapshot/
             <div class="col-lg-12 text-center" style="margin: 5px auto;">
 
                 <h2 class="section-heading">Snapshot Questionnaire</h2>
-                <h3 class="section-subheading text-muted">
-                    Please use the same email for your snapshot and your booking.
-                    <br>
-                    We will send your results in bar chart form to your e-mail once we run your responses through our system!
-                    <br>
-                    We manually run each response locally and write a short interpretation of your results to help make sense of the bar chart, so it may take up to 24 hours to receive your results via email.
-                    <br>
-                    If you have not received your results, please email us, sometimes it gets caught in spam or email typos occur!
-                    <br><br>
-                    By completing the snapshot questionnaire, you agree for us to store your responses and use them to calculate your visual descriptor results.
-                </h3>
+                <a href="#" class="toggle-description" aria-expanded="false"
+                    style="display: inline-block; margin: 10px 0 25px;">
+                    Say more
+                </a>
+                <div class="snapshot-info" style="display: none;">
+                    <h3 class="section-subheading text-muted">
+                        Please use the same email for your snapshot and your booking.
+                        <br>
+                        We will send your results in bar chart form to your e-mail once we run your responses through our system!
+                        <br>
+                        We manually run each response locally and write a short interpretation of your results to help make sense of the bar chart, so it may take up to 24 hours to receive your results via email.
+                        <br>
+                        If you have not received your results, please email us, sometimes it gets caught in spam or email typos occur!
+                        <br><br>
+                        By completing the snapshot questionnaire, you agree for us to store your responses and use them to calculate your visual descriptor results.
+                    </h3>
+                </div>
                 <h3 class="section-subheading text-muted">
                     During the questionnaire, be as specific as you'd like. Answers range from <strong>0.0 (0%)</strong> (hard disagree) 
                     to <strong>1.00 (100%)</strong> (fully agreed), adjustable in increments of <strong>0.01 (1%)</strong>.<br>
@@ -91,8 +97,8 @@ permalink: /snapshot/
         const idInput = document.getElementById("userIdInput").value.trim();
         const emailInput = document.getElementById("emailInput").value.trim();
 
-        if (!emailInput) {
-            alert("Please enter your email to give us a way to send you your results!");
+        if (!emailInput || !document.getElementById("emailInput").checkValidity()) {
+            alert("Please enter a valid email address so we can send you your results!");
             return;
         }
 
@@ -183,21 +189,51 @@ permalink: /snapshot/
     }
 
     // SUBMIT
+
     document.getElementById("submit-btn").addEventListener("click", async () => {
-        saveCurrentAnswer(); // capture last question
+        saveCurrentAnswer();
 
-        await fetch(SUBMIT_URL, {
-            method: "POST",
-            body: JSON.stringify({ 
-                uid: uid, 
-                userEmail: userEmail, 
-                answers: answers }),
-    });
+        const submitButton = document.getElementById("submit-btn");
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
 
-    alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be sent to your provided email by end of day. Please contact info@sitot.ca with any inquiries!");
-        window.location.href = "/snapshot-complete";
+        try {
+            await fetch(SUBMIT_URL, {
+                method: "POST",
+                body: JSON.stringify({
+                    uid: uid,
+                    userEmail: userEmail,
+                    answers: answers
+                })
+            });
+
+            alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be sent to your provided email by end of day. Please contact info@sitot.ca with any inquiries!");
+            window.location.href = "/snapshot-complete/";
+        } catch (err) {
+            console.error("Submission error:", err);
+            alert("We couldn't submit your responses. Please try again.");
+            submitButton.disabled = false;
+            submitButton.textContent = "Submit";
+        }
     });
 
     // INIT
     // loadQuestions();
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.toggle-description').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          const content = btn.nextElementSibling;
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+  
+          content.style.display = isExpanded ? 'none' : 'block';
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          btn.textContent = isExpanded ? 'Say more' : 'Say less';
+        });
+      });
+    });
+  </script>
