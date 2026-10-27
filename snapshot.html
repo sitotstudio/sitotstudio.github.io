@@ -11,7 +11,7 @@ permalink: /snapshot/
 
                 <h2 class="section-heading">Snapshot Questionnaire</h2>
                 <h3 class="section-subheading text-muted">
-                    Before we begin, please enter your unique ID (uid) if you were provided one, this allows us to link your responses to your order. A new UID will be assigned to you otherwise.
+                    Please use the same email for your snapshot and your booking.
                     <br>
                     We will send your results in bar chart form to your e-mail once we run your responses through our system! We manually run each response locally and write a short interpretation of your results to help make sense of the bar chart, so it may take up to 24 hours to receive your results via email. If you have not received your results, please email us, sometimes it gets caught in spam or email typos occur!
                     <br>
@@ -24,7 +24,7 @@ permalink: /snapshot/
                     Keep in mind there are no wrong answers!
                 </h3>
 
-                <div style="max-width: 400px; margin: 15px auto; text-align: left;">
+                <div style="max-width: 400px; margin: 15px auto; text-align: center;">
 
                     <div class="form-group">
                         <label>Name or UID</label>
@@ -50,7 +50,7 @@ permalink: /snapshot/
         <div class="quiz-container text-center" style="padding-top: 40px;">
 
 
-            <h3 id="question-text">Fetching Questions…</h3>
+            <h3 id="question-text">Please wait, fetching questions…</h3>
 
 
             <div class="slider-wrapper" style="margin-top: 50px;">
@@ -191,7 +191,7 @@ permalink: /snapshot/
     });
 
     alert("Your snapshot responses have been sent! If this is a live session, your results will be prepared shortly for preview. If this is a self-driven session, your results will be sent to your provided email by end of day. Please contact info@sitot.ca with any inquiries!");
-        window.location.href = "/";
+        window.location.href = "/snapshot-complete";
     });
 
     // INIT
