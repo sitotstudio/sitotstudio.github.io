@@ -11,11 +11,21 @@ permalink: /snapshot-complete/
     <!-- Heading -->
     <div class="row">
       <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Your Snapshot Is Complete!</h2>
+          <h2 class="section-heading">We have received your answers!</h2>
           <h3 class="section-subheading text-muted">
               Thank you for sharing your unique personality with us, with each of your answers informed by all your experiences that have shaped who you are.
               We hope answering the questions was in itself fun and took you on a whimsically revealing journey!
           </h3>
+          <div class="text-center" style="margin-top: 30px;">
+            <a href="https://book.stripe.com/dRm7sK7Zb0R4979esugA801"
+               class="btn btn-primary btn-xl">
+                Book a 10"x10" portrait
+            </a>
+            <br><br>
+            <a href="mailto:info@sitot.ca" class="btn btn-primary btn-sm">
+              <i class="fa fa-envelope"></i> Request a larger project or custom quote
+            </a>
+        </div>
       </div>
     </div>
   
@@ -23,46 +33,40 @@ permalink: /snapshot-complete/
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
 
-          <h3 class="section-subheading text-muted">
-              What happens next?
-          </h3>
+        <h2 class="section-heading">What's next?</h2>
+        <a href="#" class="toggle-description" aria-expanded="false">
+          Say more
+        </a>
+
+        <div class="next-steps-content" style="display: none;">
 
           <div class="service-item">
-              <h4 class="service-heading">1. Preparing your graph results</h4>
-              <p class="text-muted">
-                  We manually write a short description that accompanies every graph to help make sense of it. Take note of how high or low you've scored on every visual trait, every score regardless of how high or low says something about how you think and present to the world.
-                  Let us know what you think about your results! We send your results through a monitored email, so simply reply with your thoughts and you can be sure we will personally read your message!
-              </p>
+            <h4 class="service-heading">1. Preparing your graph results</h4>
+            <p class="text-muted">
+              We manually write a short description that accompanies every graph to help make sense of it. Take note of how high or low you've scored on every visual trait. Every score, regardless of how high or low, says something about how you think and present to the world.
+              Let us know what you think about your results! We send your results through a monitored email, so simply reply with your thoughts and you can be sure we will personally read your message!
+            </p>
           </div>
 
           <div class="service-item">
-              <h4 class="service-heading">2. Check your spam</h4>
-              <p class="text-muted">
-                  Sometimes our emails get lost in inboxes, especially for outlook recipients with auto-filtering and organization algorithms these days.
-                  If you have not seen your results in your inbox in 24 hours, it is likely there was an issue! Worry not, a copy of your results is still archived, and we can fetch it again and send it to you directly, outside of the mailing service we typically use. Email us at info@sitot.ca and we will be in touch the same day!
-              </p>
+            <h4 class="service-heading">2. Check your spam</h4>
+            <p class="text-muted">
+              Sometimes our emails get lost in inboxes, especially for Outlook recipients with auto-filtering and organization algorithms.
+              If you have not seen your results in your inbox in 24 hours, it is likely there was an issue! Worry not, a copy of your results is still archived, and we can fetch it again and send it to you directly, outside of the mailing service we typically use. Email us at info@sitot.ca and we will be in touch the same day!
+            </p>
           </div>
 
           <div class="service-item">
-              <h4 class="service-heading">3. Ready to book?</h4>
-              <p class="text-muted">
-                  Scores and descriptions can only do so much when an actual painted portrait is worth more than a thousand words.
-                  You will have access to booking links in your results email, but if you want to snag a limited spot before they're booked out for the month, place your order below and we will be in touch with a confirmed timeline and pick-up instructions!
-                  <br>
-                  We offer default canvas sizes, 10"x10" (450CAD), 15"x40" (4750CAD), and 30"x40" (6200CAD), with custom canvas sizes available as well to fit your space.
-              </p>
-          </div>
-
-          <div class="text-center" style="margin-top: 30px;">
-              <a href="https://book.stripe.com/dRm7sK7Zb0R4979esugA801"
-                 class="btn btn-primary btn-xl">
-                  Book a 10"x10" portrait
-              </a>
+            <h4 class="service-heading">3. Ready to book?</h4>
+            <p class="text-muted">
+              Scores and descriptions can only do so much when an actual painted portrait is worth more than a thousand words.
+              You will have access to booking links in your results email, but if you want to snag a limited spot before they're booked out for the month, place your order below and we will be in touch with a confirmed timeline and pick-up instructions!
               <br>
-              <a href="mailto:info@sitot.ca" class="btn btn-primary btn-sm">
-                <i class="fa fa-envelope"></i> Request a larger project or custom quote
-              </a>
+              We offer default canvas sizes, 10"x10" (450CAD), 15"x40" (4750CAD), and 30"x40" (6200CAD), with custom canvas sizes available as well to fit your space.
+            </p>
           </div>
+
+        </div>
       </div>
     </div>
 
@@ -85,4 +89,21 @@ permalink: /snapshot-complete/
         </div>
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.toggle-description').forEach(function (btn) {
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          const content = btn.nextElementSibling;
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+  
+          content.style.display = isExpanded ? 'none' : 'block';
+          btn.setAttribute('aria-expanded', String(!isExpanded));
+          btn.textContent = isExpanded ? 'Say more' : 'Say less';
+        });
+      });
+    });
+  </script>
 </section>
