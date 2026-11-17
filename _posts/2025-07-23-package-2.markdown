@@ -7,9 +7,9 @@ date: 2025-07-23
 img: bestpersonalitytest.png
 thumbnail: bestpersonalitytest-thumbnail.png
 alt: image-alt
-deal: 50% off second portrait
-prices: 10"x10" 450CAD | 15"x40" 4750CAD | 30"x40" 6200CAD | Custom 500CAD+
-browse: Coming soon
+timeline: Up to 5 years between snapshots
+prices: 50% off second portrait when purchased together
+browse: Cara portfolio
 description: Multiple portraits made for a same person, capturing a person at different points in time. This package is for people looking to capture changes, growth, or multiple versions of themselves or a loved one. Some popular scenarios that are a perfect fit for this package include (1) capturing a child's growth every set number of months or years. (2) A before and after snapshot capture when there is a known upcoming transformative experience. (3) Neurodiverse snapshots for DID systems, BPD or various state of minds. We will work with you to time the snapshots accordingly, please let us know if there are specific arrangements that need to be made. Comes with a comparative graph with your first portrait's scores.
 
 ---
