@@ -1,6 +1,6 @@
 ---
 title: Pet Portraits
-subtitle: (Beta testing)
+subtitle: Coming soon [beta]
 layout: default
 modal-id: 4
 date: 2025-07-21

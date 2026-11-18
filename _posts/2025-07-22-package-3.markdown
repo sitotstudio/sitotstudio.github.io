@@ -1,6 +1,6 @@
 ---
 title: Relationship Bundle
-subtitle: Compare yourselves
+subtitle: Compare eachother
 layout: default
 modal-id: 3
 date: 2025-07-22

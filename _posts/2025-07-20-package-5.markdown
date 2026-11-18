@@ -1,6 +1,6 @@
 ---
 title: Corporate Package
-subtitle: Team culture visualized
+subtitle: Team culture & gifting
 layout: default
 modal-id: 5
 date: 2025-07-20
